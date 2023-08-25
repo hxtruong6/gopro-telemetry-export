@@ -2,3 +2,10 @@ gopro:
   to_gpx: ~/go/src/github.com/stilldavid/gopro-utils/bin/gopro2gpx/gopro2gpx
   to_json: ~/go/src/github.com/stilldavid/gopro-utils/bin/gopro2json/gopro2json
   gpmd_info: ~/go/src/github.com/stilldavid/gopro-utils/bin/gpmdinfo/gpmdinfo
+
+gopro2:
+  to_gpx: ~/go/src/github.com/JuanIrache/gopro-utils/bin/gopro2gpx/gopro2gpx
+  to_json: ~/go/src/github.com/JuanIrache/gopro-utils/bin/gopro2json/gopro2json
+  gpmd_info: ~/go/src/github.com/JuanIrache/gopro-utils/bin/gpmdinfo/gpmdinfo
+  gps2kml: ~/go/src/github.com/JuanIrache/gopro-utils/bin/gps2kml/gps2kml
+  to_csv: ~/go/src/github.com/JuanIrache/gopro-utils/bin/gpmd2csv/gpmd2csv

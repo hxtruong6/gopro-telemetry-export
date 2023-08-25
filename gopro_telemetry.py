@@ -40,7 +40,7 @@ class GoProTelemetry(object):
             print("Appending filename with timestamp")
             self.append_filename_with_timestamp()
 
-        # self.extract_telemetry()
+        self.extract_telemetry()
         self.extract_all()
 
     def get_basename(self):
@@ -88,11 +88,13 @@ class GoProTelemetry(object):
         config_path = os.path.join(os.path.dirname(__file__), config_path)
         print(f"Loading config from {config_path}")
         with open(config_path, "r") as cfg:
-            # gopro_lib = yaml.load(cfg)["gopro"]
-            gopro_lib = yaml.safe_load(cfg)["gopro"]
+            # load go pro 2
+            gopro_lib = yaml.safe_load(cfg)["gopro2"]
         self.gopro2gpx_path = os.path.expanduser(gopro_lib["to_gpx"])
         self.gopro2json_path = os.path.expanduser(gopro_lib["to_json"])
         self.gpmdinfo_path = os.path.expanduser(gopro_lib["gpmd_info"])
+        self.gopro2csv_path = os.path.expanduser(gopro_lib["to_csv"])
+        self.gps2kml_path = os.path.expanduser(gopro_lib["gps2kml"])
 
     def extract_telemetry(self):
         print("Extracting telemetry")
@@ -107,7 +109,9 @@ class GoProTelemetry(object):
     def extract_all(self):
         self.extract_gpx()
         self.extract_json()
-        self.extract_metadata()
+        # self.extract_metadata()
+        self.extract_csv()
+        self.extract_kml()
 
     def extract_gpx(self):
         gpx_path = os.path.join(self.video_dir, self.filename + ".gpx")
@@ -150,6 +154,22 @@ class GoProTelemetry(object):
             shutil.move("./gyro.csv", gyro_path)
             shutil.move("./accl.csv", accl_path)
             shutil.move("./temp.csv", temp_path)
+
+    def extract_csv(self):
+        csv_path = os.path.join(self.video_dir, self.filename + ".csv")
+        print(f"Extracting CSV to {csv_path}")
+        # If reprocessing or csv file does not yet exists
+        if self.reprocess or not os.path.isfile(csv_path):
+            command = [self.gopro2csv_path, "-i", self.telemetry_path, "-o", csv_path]
+            GoProTelemetry.call_subprocess(command)
+
+    def extract_kml(self):
+        kml_path = os.path.join(self.video_dir, self.filename + ".kml")
+        print(f"Extracting KML to {kml_path}")
+        # If reprocessing or csv file does not yet exists
+        if self.reprocess or not os.path.isfile(kml_path):
+            command = [self.gps2kml_path, "-i", self.telemetry_path, "-o", kml_path]
+            GoProTelemetry.call_subprocess(command)
 
     def get_creation_time(self):
         timestamp = self.ffprobe_streams["format"]["tags"]["creation_time"]

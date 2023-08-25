@@ -4,3 +4,4 @@ config.yml
 video/*
 log*
 *.zip
+temp
