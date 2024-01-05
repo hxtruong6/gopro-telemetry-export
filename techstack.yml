@@ -1,11 +1,12 @@
 repo_name: hxtruong6/gopro-telemetry-export
 report_id: d476511847355d3c6921f12b015fa921
+version: 0.1
 repo_type: Public
-timestamp: '2023-11-14T05:16:43+00:00'
+timestamp: '2024-01-05T08:45:26+00:00'
 requested_by: hxtruong6
 provider: github
 branch: master
-detected_tools_count: 11
+detected_tools_count: 12
 tools:
 - name: Python
   description: A clear and powerful object-oriented programming language, comparable
@@ -16,6 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/993/pUBY5pVj.png
+  detection_source_url: https://github.com/hxtruong6/gopro-telemetry-export
   detection_source: Repo Metadata
 - name: Git
   description: Fast, scalable, distributed revision control system
@@ -25,6 +27,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/hxtruong6/gopro-telemetry-export
   detection_source: Repo Metadata
 - name: PyPI
   description: A repository of software for the Python programming language
@@ -34,6 +37,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Hosted Package Repository
   image_url: https://img.stackshare.io/service/12572/-RIWgodF_400x400.jpg
+  detection_source_url: https://github.com/hxtruong6/gopro-telemetry-export/blob/master/requirements.txt
   detection_source: requirements.txt
   last_updated_by: hxtruong6
   last_updated_on: 2023-08-25 07:51:56.000000000 Z
@@ -42,6 +46,7 @@ tools:
   open_source: false
   hosted_saas: false
   image_url: https://img.stackshare.io/service/3730/no-img-open-source.png
+  detection_source_url: https://github.com/hxtruong6/gopro-telemetry-export/blob/master/requirements.txt
   detection_source: requirements.txt
   last_updated_by: hxtruong6
   last_updated_on: 2023-08-25 07:51:56.000000000 Z
@@ -54,10 +59,25 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png
+  detection_source_url: https://github.com/hxtruong6/gopro-telemetry-export
   detection_source: Repo Metadata
+- name: PyYAML
+  description: YAML parser and emitter for Python
+  package_url: https://pypi.org/project/PyYAML
+  version: 6.0.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19829/default_74a61b43bdb9fc0cba2978316b9976f43545029b.png
+  detection_source_url: https://github.com/hxtruong6/gopro-telemetry-export/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: hxtruong6
+  last_updated_on: 2023-08-25 07:51:56.000000000 Z
 - name: black
   description: The uncompromising code formatter
-  package_url: https://pypi.org/black
+  package_url: https://pypi.org/project/black
   version: 23.7.0
   license: MIT
   open_source: true
@@ -65,13 +85,13 @@ tools:
   category: Libraries
   sub_category: PyPI Packages
   image_url: https://img.stackshare.io/package/20099/default_029b9bbfb6be2cd34bebeda5b8e1e80a1d22441c.png
-  detection_source_url: requirements.txt
+  detection_source_url: https://github.com/hxtruong6/gopro-telemetry-export/blob/master/requirements.txt
   detection_source: requirements.txt
   last_updated_by: hxtruong6
   last_updated_on: 2023-08-25 07:51:56.000000000 Z
 - name: click
   description: Composable command line interface toolkit
-  package_url: https://pypi.org/click
+  package_url: https://pypi.org/project/click
   version: 8.1.7
   license: BSD-3-Clause
   open_source: true
@@ -79,13 +99,13 @@ tools:
   category: Libraries
   sub_category: PyPI Packages
   image_url: https://img.stackshare.io/package/19830/default_74a61b43bdb9fc0cba2978316b9976f43545029b.png
-  detection_source_url: requirements.txt
+  detection_source_url: https://github.com/hxtruong6/gopro-telemetry-export/blob/master/requirements.txt
   detection_source: requirements.txt
   last_updated_by: hxtruong6
   last_updated_on: 2023-08-25 07:51:56.000000000 Z
 - name: packaging
   description: Core utilities for Python packages
-  package_url: https://pypi.org/packaging
+  package_url: https://pypi.org/project/packaging
   version: '23.1'
   license: BSD-3-Clause,Apache-2.0
   open_source: true
@@ -93,13 +113,13 @@ tools:
   category: Libraries
   sub_category: PyPI Packages
   image_url: https://img.stackshare.io/package/19894/default_f716e4bc541a9eb6e3f5b7a20d7c35355075b0b4.png
-  detection_source_url: requirements.txt
+  detection_source_url: https://github.com/hxtruong6/gopro-telemetry-export/blob/master/requirements.txt
   detection_source: requirements.txt
   last_updated_by: hxtruong6
   last_updated_on: 2023-08-25 07:51:56.000000000 Z
 - name: pathspec
   description: Utility library for gitignore style pattern matching of file paths
-  package_url: https://pypi.org/pathspec
+  package_url: https://pypi.org/project/pathspec
   version: 0.11.2
   license: MPL-2.0
   open_source: true
@@ -107,13 +127,13 @@ tools:
   category: Libraries
   sub_category: PyPI Packages
   image_url: https://img.stackshare.io/package/20261/default_24e344cf78482d8a66297ae9ebea86f00b570483.png
-  detection_source_url: requirements.txt
+  detection_source_url: https://github.com/hxtruong6/gopro-telemetry-export/blob/master/requirements.txt
   detection_source: requirements.txt
   last_updated_by: hxtruong6
   last_updated_on: 2023-08-25 07:51:56.000000000 Z
 - name: python-dateutil
   description: Extensions to the standard Python datetime module
-  package_url: https://pypi.org/python-dateutil
+  package_url: https://pypi.org/project/python-dateutil
   version: 2.8.2
   license: NRL
   open_source: true
@@ -121,13 +141,13 @@ tools:
   category: Libraries
   sub_category: PyPI Packages
   image_url: https://img.stackshare.io/package/19833/default_58dbe7b4d7ec447b62773209af0f9a31bbabf5bd.png
-  detection_source_url: requirements.txt
+  detection_source_url: https://github.com/hxtruong6/gopro-telemetry-export/blob/master/requirements.txt
   detection_source: requirements.txt
   last_updated_by: hxtruong6
   last_updated_on: 2023-08-25 07:51:56.000000000 Z
 - name: six
   description: Python 2 and 3 compatibility utilities
-  package_url: https://pypi.org/six
+  package_url: https://pypi.org/project/six
   version: 1.16.0
   license: MIT
   open_source: true
@@ -135,7 +155,7 @@ tools:
   category: Libraries
   sub_category: PyPI Packages
   image_url: https://img.stackshare.io/package/19827/default_74a61b43bdb9fc0cba2978316b9976f43545029b.png
-  detection_source_url: requirements.txt
+  detection_source_url: https://github.com/hxtruong6/gopro-telemetry-export/blob/master/requirements.txt
   detection_source: requirements.txt
   last_updated_by: hxtruong6
   last_updated_on: 2023-08-25 07:51:56.000000000 Z
